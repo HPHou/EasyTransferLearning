@@ -106,8 +106,6 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs=25):
 
 if __name__ == "__main__":
     
-    
-    
     model_ft = models.resnet18(pretrained=True).to(device)
     num_ftrs = model_ft.fc.in_features
     model_ft.fc = nn.Linear(num_ftrs, 2)
